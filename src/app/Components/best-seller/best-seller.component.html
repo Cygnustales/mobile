@@ -1,0 +1,12 @@
+
+<h3>Best Seller</h3>
+<div *ngFor="let best of bestSeller" class="products" (click)="detail(best.id,best.seoUrl)">   
+    <p class="types">{{best.fullName}}</p>
+    <p class="highlight">{{best.financingSimpleDescription}}</p>
+    <p class="price">Rp.{{best.price | number}}</p>
+    <p class="installment">Mulai Rp.{{best.installment.installment | number}} Per Bulan</p>
+    <img [src]="best.image" class="img">
+</div>
+<div align="center">
+        <div class="all-btn" (click)="allProducts()">See All Phones</div>
+</div>

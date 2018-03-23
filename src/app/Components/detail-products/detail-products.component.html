@@ -1,0 +1,122 @@
+<div class="allpage" style="padding-bottom:5rem;">
+  <div class="slide">  
+    <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let image of gallery">
+          <img [src]="image.url" width="100%">
+        </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="title">{{fullName}}</div>
+  <div class="highlight">{{highlight}}</div>
+  <div align="center">
+      <div (click)="variant(detailData)" class="varianButton">PILIH VARIAN (Warna, Storage & Kondisi) <i class="fa fa-arrow-right fa-lg"></i></div>
+  </div>
+  
+  <div class="usp" (click)="toInfo()">  
+    <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let image of uspImage">
+          <img [src]="image" width="100%">
+        </ng-template>
+    </ngb-carousel>
+  </div>
+
+  <div class="tab-container">
+      <div class="tab-button" (click)="descBtn()">Description</div>
+      <div class="tab-button" (click)="specBtn()">Specs</div>
+      <div class="undertab-l" *ngIf="desc"></div>
+      <div class="undertab-r" *ngIf="spec"></div>
+  </div>
+  <div class="desc" *ngIf="desc" [innerHtml]="description"></div>
+  <div class="specs" *ngIf="spec">
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+
+        <tr class="specs-box">
+            <td class="specs-title">Screen Size</td>
+            <td class="specs-data">{{screenSize}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Screen Resolution</td>
+            <td class="specs-data">{{screenResolution}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Back Camera</td>
+            <td class="specs-data">{{backCamera}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Front Camera</td>
+            <td class="specs-data">{{frontCamera}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Battery Capacity</td>
+            <td class="specs-data">{{battery}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Sim</td>
+            <td class="specs-data">{{sim}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Sim Type</td>
+            <td class="specs-data">{{simType}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Micro SD</td>
+            <td class="specs-data"><i *ngIf="micro=='Ada'" class="fa fa-check"></i> {{micro}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">OS</td>
+            <td class="specs-data">{{os}}</td>
+        </tr> 
+        <tr class="specs-box">
+            <td class="specs-title">Processor Speed</td>
+            <td class="specs-data">{{processor}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Network</td>
+            <td class="specs-data">{{network}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Wifi</td>
+            <td class="specs-data">{{wifi}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Bluetooth</td>
+            <td class="specs-data"><i *ngIf="bluetooth=='Ada'" class="fa fa-check"></i> {{bluetooth}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">GPS</td>
+            <td class="specs-data"><i *ngIf="gps=='Ada'" class="fa fa-check"></i> {{gps}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Has 4G</td>
+            <td class="specs-data"><i *ngIf="fourG=='Ada'" class="fa fa-check"></i> {{fourG}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">External Storage</td>
+            <td class="specs-data">{{external}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Ram</td>
+            <td class="specs-data">{{ram}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Storage</td>
+            <td class="specs-data">{{storage}}</td>
+        </tr>
+        <tr class="specs-box">
+            <td class="specs-title">Color</td>
+            <td class="specs-data">{{color}}</td>
+        </tr>
+  </div>
+
+
+</div>
+<div class="bottom-bar">
+  <div class="bottom-left">
+      <p class="price">Rp.{{kreditPlus | number}}x{{kreditPlusPeriod}}</p>
+    <p>Mulai Dari</p>
+  </div>
+  <div class="bottom-right" (click)="variant(detailData)">Beli Sekarang</div>
+</div>

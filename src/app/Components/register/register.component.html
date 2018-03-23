@@ -1,0 +1,118 @@
+<div class="allpage padding">
+  <div align="center" *ngIf="first">
+    <p class="title">Data Diri</p>
+    <input name="ktp" class="input" type="text" placeholder="Kartu Pengenal (KTP)">
+    <label for="year">Tanggal Lahir</label>
+    <input id="year" name="year" class="input-year" type="text" placeholder="YYYY" maxlength="4">
+    <input id="month" name="month" class="input-month" type="text" placeholder="MM" maxlength="2">
+    <input id="day" name="day" class="input-day" type="text" placeholder="DD" maxlength="2">
+
+    <div class="button">Fill Form with Current Kredit Plus Record</div>
+    <p class="text">Status : <span style="color:blue;">Search Your Record with KTP and Birth Date</span></p>
+
+    <input name="nama" class="input" type="text" placeholder="Nama">
+    <input name="tempat" class="input" type="text" placeholder="Tempat Lahir">
+    <select class="form-control select">
+      <option>Gender</option>
+      <option>Pria</option>
+      <option>Wanita</option>
+    </select>
+    <input name="phone" class="input" type="phone" placeholder="Hanphone">
+    <input name="email" class="input" type="email" placeholder="Email">
+    <select class="form-control select">
+      <option>Status Pernikahan</option>
+      <option [value]="marital.id" *ngFor="let marital of marital">{{marital.name}}</option>
+    </select>
+    <input name="tanggungan" class="input" type="text" placeholder="Jumlah Tanggungan">
+    <input name="ibu" class="input" type="text" placeholder="Nama Gadis Ibu Kandung">
+
+    <div class="button" (click)="toNext('2')">Next</div>
+  </div>
+
+  <div align="center" *ngIf="second">
+    <p class="title">Pendidikan & Pekerjaan</p>
+    <select class="form-control select" >
+      <option>Pendidikan Terakhir</option>
+      <option [value]="edu.id" *ngFor="let edu of education">{{edu.name}}</option>
+    </select>
+    <select class="form-control select" #selectElem (change)="selectJobs(selectElem.value)">
+      <option>Pekerjaan</option>
+      <option [value]="job.id" *ngFor="let job of profession">{{job.name}}</option>
+    </select>
+    <select class="form-control select">
+      <option>Posisi Pekerjaan</option>
+      <option [value]="job.id" *ngFor="let job of jobPosition">{{job.name}}</option>
+    </select>
+    <input name="worksince" class="input" type="phone" placeholder="Tahun Bekerja">
+    <select class="form-control select">
+        <option>Bulan Bekerja</option>
+    </select>
+    <input name="income" class="input" type="phone" placeholder="Penghasilan Bulanan">
+    <p class="title">Work Address</p>
+    <select class="form-control select" #selectCity (change)="getKecamatan(selectCity.value)">
+      <option>Kota</option>
+      <option [value]="city" *ngFor="let city of city">{{city}}</option>
+    </select>
+    <select class="form-control select" #selectkecamatan (change)="getKelurahan(selectkecamatan.value, selectedCity)">
+      <option>Kecamatan / Kabupaten</option>
+      <option [value]="kecamatan" *ngFor="let kecamatan of kecamatan">{{kecamatan}}</option>
+    </select>
+    <select class="form-control select" #selectkelurahan (change)="selectKelurahan(selectkelurahan.value)">
+      <option>Kelurahan</option>
+      <option [value]="kelurahan" *ngFor="let kelurahan of kelurahan">{{kelurahan}}</option>
+    </select>
+    <input name="work-address" class="input" type="text" placeholder="Alamat Perusahan">
+    <div class="button" (click)="toNext('3')">Next</div>
+  </div>
+
+  <div align="center" *ngIf="third">
+    <p class="title">Alamat Tempat Tinggal</p>
+    <p class="title-gray">Alamat Sesuai KTP</p>
+    <select class="form-control select" #selectCity (change)="getKecamatan(selectCity.value)">
+      <option>Kota</option>
+      <option [value]="city" *ngFor="let city of city">{{city}}</option>
+    </select>
+    <select class="form-control select" #selectkecamatan (change)="getKelurahan(selectkecamatan.value, selectedCity)">
+      <option>Kecamatan / Kabupaten</option>
+      <option [value]="kecamatan" *ngFor="let kecamatan of kecamatan">{{kecamatan}}</option>
+    </select>
+    <select class="form-control select" #selectkelurahan (change)="selectKelurahan(selectkelurahan.value)">
+      <option>Kelurahan</option>
+      <option [value]="kelurahan" *ngFor="let kelurahan of kelurahan">{{kelurahan}}</option>
+    </select>
+    <input name="address" class="input" type="text" placeholder="Alamat">
+    <div>
+      <input class="input-check" type="checkbox" id="samething">
+      <label class="form-check-label text" for="samething">
+        Alamat KTP sama dengan alamat rumah
+      </label>
+    </div>
+    <p class="title-gray">Alamat Rumah</p>
+    <select class="form-control select" #selectCity (change)="getKecamatan(selectCity.value)">
+      <option>Kota</option>
+      <option [value]="city" *ngFor="let city of city">{{city}}</option>
+    </select>
+    <select class="form-control select" #selectkecamatan (change)="getKelurahan(selectkecamatan.value, selectedCity)">
+      <option>Kecamatan / Kabupaten</option>
+      <option [value]="kecamatan" *ngFor="let kecamatan of kecamatan">{{kecamatan}}</option>
+    </select>
+    <select class="form-control select" #selectkelurahan (change)="selectKelurahan(selectkelurahan.value)">
+      <option>Kelurahan</option>
+      <option [value]="kelurahan" *ngFor="let kelurahan of kelurahan">{{kelurahan}}</option>
+    </select>
+    <input name="address" class="input" type="text" placeholder="Alamat">
+    <div class="button" (click)="toNext('4')">Next</div>
+  </div>
+
+  <div align="center" *ngIf="four">
+      <p class="title">Pay Slip</p>
+      <div class="left-part">
+        <p class="title-gray">Pay Slip</p>
+        <div class="upload-box"><i class="fa fa-plus-circle fa-3x"></i></div>
+      </div>
+      <div class="right-part">
+        <p class="title-gray">Contoh</p>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="allpage">
+<h5>{{vardata.fullName}}</h5>
+<div class="top-container">
+    <div *ngFor="let phones of combinationDevices">
+        <div *ngIf="vardata.color === phones.color">
+            <div align="left" class="image-container">
+                <img [src]="phones.originalImage">
+            </div>
+            <div class="right-container">
+                <p class="title">Cicilan : <br><br><span class="installment"> Rp.{{phones.kreditPlus[10].installment | number}}x{{phones.kreditPlus[10].installmentPeriod}}</span></p>
+                <p class="title">Storage : <br><br><span class="others">{{phones.storage}}</span></p>
+                <p class="title">Color : <br><br><span class="others"> {{phones.color}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="storage">
+    <p>Storage</p>
+    <div *ngFor="let storage of storages; let i=index">
+            <div class="storage-button-active" *ngIf="vardata.storage === storage">
+                {{storage}}
+            </div>
+            <div class="storage-button" *ngIf="vardata.storage !== storage">
+                {{storage}}
+            </div>
+    </div>
+</div>
+<div class="color">
+        <p>Color</p>
+        <div *ngFor="let color of color; let i=index">
+                <div class="storage-button-active" *ngIf="vardata.color === color">
+                        {{color}}
+                </div>
+                <div class="storage-button" *ngIf="vardata.color !== color" (click)="setColor(color)">
+                        {{color}}
+                </div>
+            
+        </div>
+</div>
+<div align="center" class="bottom-container">
+        <p class="text">Harga akhir dapat berubah tergantung dari pilihan warna dan kapasitas memori</p>
+
+    <div class="bottom-left">APPLY</div>
+    <div class="bottom-right" (click)="buy(vardata)">BELI</div>
+</div>
+</div>

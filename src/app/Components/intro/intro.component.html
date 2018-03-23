@@ -1,0 +1,92 @@
+<div class="allpage">
+    <h5>{{vardata.fullName}}</h5>
+    <div class="top-container">
+        <div *ngFor="let phones of combinationDevices">
+            <div *ngIf="vardata.color === phones.color">
+                <div align="left" class="image-container">
+                    <img [src]="phones.originalImage">
+                </div>
+                <div class="right-container">
+                    <p class="title">DP+Admin : </p><p class="installment">Rp.{{downpayment | number}}</p>
+                    <p class="title">Cicilan 12 : </p><p class="installment"> Rp.{{selected.installment | number}}x{{selected.installmentPeriod}}</p>
+                    <p class="title">Storage : </p><p class="others">{{phones.storage}}</p>
+                    <p class="title">Color : </p><p class="others"> {{phones.color}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding:1rem; margin-top:2rem;">
+        <p class="title">Pilih DP yang kamu mau</p>
+        <p class="subtitle-gray" style="width:100%; text-align:center; padding:0 2rem 0 2rem;">Dengan DP 10% kamu bisa upgrade ke HP baru tanpa biaya apapun di bulan ke 8</p>
+        <div class="dp-box" align="center" (click)="pilihDp10()">
+            <div class="outer" align="center">
+                <div class="circle-full" *ngIf="pilih10"></div>
+                
+            </div>
+            <div class="percent">10%</div>
+        </div>
+        <div class="dp-box" align="center" (click)="pilihDp20()">
+            <div class="outer" align="center">
+                <div class="circle-full" *ngIf="pilih20"></div>
+            </div>
+            <div class="percent">20%</div>
+        </div>
+    </div>
+    <div style="width:100%;">
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr class="coloumn">
+            <td class="left-col">
+                <div class="vertical-line"></div>
+                <div class="outer" align="center">
+                    <div class="circle-full"></div>
+                </div>
+            </td>
+            <td class="center-col"><p>Aplikasi Online<br><span class="text-smal-gray">Instant</span></p></td>
+            <td class="right-col green-text">Isi aplikasi Online dengan nomer telepon yang valid, foto KTP + foto Selfie. Tanpa dikenakan biaya tambahan</td>
+            
+        </tr>
+        <div class="line"></div>
+        <tr class="coloumn">
+            <td class="left-col">
+                <div class="outer" align="center">
+                </div>
+            </td>
+            <td class="center-col"><p>Persetujuan Kredit<br><span class="text-smal-gray">3 hari kerja</span></p></td>
+            <td class="right-col green-text">KreditPlus sebagai Partner Pembiayaan akan menghubungi anda dan mengambil kelengkapan dokumen dalam 3 hari kerja.</td>
+        </tr>
+        <div class="line"></div>
+        <tr class="coloumn">
+            <td class="left-col">
+                <div class="outer" align="center">
+                </div>
+            </td>
+            <td class="center-col"><p>Down-Payment<br><span class="text-smal-gray">1 x 24 jam</span></p></td>
+            <td class="right-col green-text">Lakukan pembayaran DP sebesar 10 - 20% dalam waktu 24 jam. Bisa pakai bank transfer.</td>
+        </tr>
+        <div class="line"></div>
+        <tr class="coloumn">
+            <td class="left-col">
+                <div class="outer" align="center">
+                </div>
+            </td>
+            <td class="center-col"><p>Pengiriman Barang<br><span class="text-smal-gray">3 -4 hari kerja</span></p></td>
+            <td class="right-col green-text">Barang akan dikirimkan dalam 3 - 4 hari kerja setelah kelengkapan dokumen di tandatangani</td>
+        </tr>
+    </div>
+    <div align="center">
+        <input class="input" type="text" name="promo" placeholder="Masukan Kode Promo">
+    </div>
+    <div align="center" style="margin:1rem;">
+            <div class="button">Membuat Akun</div>
+    </div>
+    <div style="margin:1rem;">
+        <p class="subtitle-gray">Apabila Anda membutuhkan bantuan, jangan ragu untuk menghubungi kami lewat chat pada  tautan ini: 
+          Laku6 CS Chat atau  di nomer telepon: 0218314973 (10:00 - 19:00)</p>
+        <p class="text-smal-gray">*Mohon maaf atas waktu yang lebih lama daripada biasanya  dikarenakan sedang ramai</p>
+    </div>
+
+</div>

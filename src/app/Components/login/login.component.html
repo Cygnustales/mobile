@@ -1,0 +1,24 @@
+<div class="allpage" align="center">
+  <img src="assets/images/logo-laku.png" class="logo">
+  <p class="title" *ngIf="request">Get your phone now!</p>
+  <p class="title" *ngIf="waiting">Waiting for OTP</p>
+</div>
+<div class="login-page" *ngIf="request">
+    <div class="input-group mb-3"> 
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-mobile fa-2x"></i></span>
+      </div>
+      <input type="text" class="form-control"  placeholder="Nomer Handphone" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="button" (click)="goOtp()">Masuk</div>
+  </div>
+<div class="login-page" *ngIf="waiting">
+    <div class="input-group mb-3"> 
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1"><i class="fa fa-mobile fa-2x"></i></span>
+      </div>
+      <input type="text" class="form-control" placeholder="OTP" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="button">Submit</div>
+    <div class="button-grey">Resend OTP</div>
+  </div>

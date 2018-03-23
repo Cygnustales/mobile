@@ -1,0 +1,14 @@
+<div class="allpage" style="background-color:#f1f1f1;">
+  <div style="padding:0;">
+    <img [src]="banner" class="banner">
+  </div>
+<div style="background-color:#f1f1f1;">
+  <div *ngFor="let best of brandList" class="products" (click)="detail(best.id,best.seoUrl)">   
+      <p class="types">{{best.fullName}}</p>
+      <p class="highlight">{{best.financingSimpleDescription}}</p>
+      <p class="price">Rp.{{best.price | number}}</p>
+      <p class="installment">Mulai Rp.{{best.installment.installment | number}} Per Bulan</p>
+      <img [src]="best.image" class="img">
+  </div>
+</div>
+</div>

@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "~bootswatch/dist/yeti/_variables.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootswatch/dist/yeti/_bootswatch.scss"
+$base_color : #86CF51;
+
+.allpage {
+    margin-top: 3.8rem;
+}
+.button{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: $base_color;
+    text-align: center;
+    color: white;
+    padding: .5rem;
+    font-weight: bold;
+    font-size: .8rem;
+}
+.padding{
+    padding: 1rem;
+}
+.text{
+    color: black;
+    text-align: center;
+    line-height: 16px;
+    font-weight: normal;
+    font-size: .6rem;
+    padding: 0rem;
+}
+.title{
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: $base_color;
+}
+.subtitle-gray{
+    text-align: center;
+    padding-top: 1rem;
+    font-size: .8rem;
+    color: gray;
+}
+
+.title-gray{
+    text-align: center;
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: gray;
+}
+.login-page{
+    margin-top: 10%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo{
+    width: 70%;
+}
+
+.button-grey{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color:lightgray;
+    text-align: center;
+    color: white;
+    padding: .5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.text-smal-gray{
+    font-size: .6rem;
+    color:gray;
+}

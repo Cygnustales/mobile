@@ -1,0 +1,44 @@
+.pages {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 3.9rem;
+    widows: 100%;
+}
+h3{
+    color: #86CF51;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 1rem;
+}
+.brand-container{
+    padding: .8rem;
+}
+.brands{
+    width: 45%;
+    height: 6rem;
+    margin: .5rem;
+    display: inline-block;
+}
+.imagePhone{
+    width: 5rem;
+    height: 5rem;
+}
+.imagePhone .phone{
+    width: auto;
+    height: 5rem;
+}
+.logo-box{
+    position: absolute;
+    margin-left: 5rem;
+}
+.logo-box .logo{
+    width: auto;
+    height: 2rem;
+}
+.brand-name{
+    width: 5rem;
+    position: absolute;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+    font-size: .7rem;
+}

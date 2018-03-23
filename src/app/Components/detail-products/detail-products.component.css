@@ -1,0 +1,124 @@
+.desc {
+    width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+}
+.slide{
+    width: 100%;
+    height: 28rem;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.highlight{
+    text-align: center;
+    font-size: .8rem;
+}
+.varianButton{
+    margin-top: .5rem;
+    width: 95%;
+    height: 2.5rem;
+    text-align: center;
+    background-color: #86CF51;
+    font-weight: bold;
+    font-size: .8rem;
+    color: white;
+    padding: .5rem;
+    padding-top: .65rem;
+    border-radius: 5px;
+    text-align: left;
+}
+.varianButton i{
+    padding-top: .2rem;
+    float: right;
+}
+.usp{
+    margin-top: 0rem;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.tab-container{
+    width: 100%;
+    height: 3rem;
+}
+.tab-button{
+    width: 49%;
+    height: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    display: inline-block;
+    background-color: white;
+}
+.undertab-l{
+    width: 50%;
+    height: .2rem;
+    background-color: #86CF51;
+    float: left;
+}
+.undertab-r{
+    width: 50%;
+    height: .2rem;
+    background-color: #86CF51;
+    float: right;
+}
+.bottom-bar{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+}
+.bottom-left{
+    float: left;
+    width: 50%;
+    height: 3rem;
+    background-color:white;
+    
+}
+.bottom-left p{
+    padding: .5rem;
+    color: red;
+    font-size: .8rem;
+    font-weight: bold;
+}
+.bottom-left .price{
+    color: #86CF51;
+    font-weight: bold;
+    font-size: .8rem;
+    position: absolute;
+    margin-top: 1.2rem;
+}
+.bottom-right{
+    float: right;
+    width: 50%;
+    height: 3rem;
+    background-color: #86CF51;
+    text-align: center;
+    padding-top: .8rem;
+    color: white;
+}
+.specs{
+    margin-top: 1rem;
+}
+.specs-box{
+    width: 100%;
+    min-height: 2.5rem;
+    padding: .5rem;
+    margin-top: .2rem;
+    color: grey;
+
+}
+.specs-title{
+    padding: .5rem;
+    width: 50%;
+    min-height: 2rem;
+    vertical-align: top;
+}
+.specs-data{
+    padding: .5rem;
+    width: 50%;
+    min-height: 2rem;
+}
+.specs-data i{
+    color: #86CF51;
+}
