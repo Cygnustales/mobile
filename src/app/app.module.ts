@@ -23,6 +23,8 @@ import { IntroComponent } from './Components/intro/intro.component';
 //Services
 import { Services } from './Services/services.service';
 import { DataService } from './Services/data/data.service';
+import { APP_BASE_HREF } from '@angular/common';
+import { environment } from '../environments/environment.prod';
 
 
 //
@@ -57,7 +59,7 @@ import { DataService } from './Services/data/data.service';
     ReactiveFormsModule,
     NgbModule.forRoot()
   ],
-  providers: [Services, DataService],
+  providers: [Services, DataService,{provide: APP_BASE_HREF, useValue: environment.deploy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
