@@ -5,8 +5,8 @@
 
 export const environment = {
   production: false,
-  baseUrl:'//localhost:8000/',
-  deploy:'/ndk-web/',
+  baseUrl:'http://localhost:8000/',
+  deploy:'/',
   v1:'api/v1/',
   v2:'api/v2/'
 };

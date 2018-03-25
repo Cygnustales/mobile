@@ -59,7 +59,7 @@ import { environment } from '../environments/environment.prod';
     ReactiveFormsModule,
     NgbModule.forRoot()
   ],
-  providers: [Services, DataService,{provide: APP_BASE_HREF, useValue: environment.deploy}],
+  providers: [Services, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
